@@ -799,9 +799,9 @@ void UI_DisplayMenu(void)
 			break;
 
 		case MENU_F_LOCK:
-			if(!gIsInSubMenu && gUnlockAllTxConfCnt>0 && gUnlockAllTxConfCnt<10)
-				strcpy(String, "READ\nMANUAL");
-			else
+///			if(!gIsInSubMenu && gUnlockAllTxConfCnt>0 && gUnlockAllTxConfCnt<10)
+///				strcpy(String, "READ\nMANUAL");
+///			else
 				strcpy(String, gSubMenu_F_LOCK[gSubMenuSelection]);
 			break;
 
