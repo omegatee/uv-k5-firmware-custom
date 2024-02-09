@@ -223,9 +223,9 @@ int MENU_GetLimits(uint8_t menu_id, int32_t *pMin, int32_t *pMax)
 			*pMax = ARRAY_SIZE(gSubMenu_RX_TX) - 1;
 			break;
 
-		#ifdef ENABLE_AM_FIX
-			case MENU_AM_FIX:
-		#endif
+///		#ifdef ENABLE_AM_FIX
+///			case MENU_AM_FIX:
+///		#endif
 		#ifdef ENABLE_AUDIO_BAR
 			case MENU_MIC_BAR:
 		#endif
@@ -699,13 +699,13 @@ void MENU_AcceptSetting(void)
 			gRequestSaveChannel = 1;
 			return;
 
-		#ifdef ENABLE_AM_FIX
-			case MENU_AM_FIX:
-				gSetting_AM_fix = gSubMenuSelection;
-				gVfoConfigureMode = VFO_CONFIGURE_RELOAD;
-				gFlagResetVfos    = true;
-				break;
-		#endif
+///		#ifdef ENABLE_AM_FIX
+///			case MENU_AM_FIX:
+///				gSetting_AM_fix = gSubMenuSelection;
+///				gVfoConfigureMode = VFO_CONFIGURE_RELOAD;
+///				gFlagResetVfos    = true;
+///				break;
+///		#endif
 
 		#ifdef ENABLE_NOAA
 			case MENU_NOAA_S:
@@ -1078,11 +1078,11 @@ void MENU_ShowCurrentSetting(void)
 			gSubMenuSelection = gTxVfo->Modulation;
 			break;
 
-#ifdef ENABLE_AM_FIX
-		case MENU_AM_FIX:
-			gSubMenuSelection = gSetting_AM_fix;
-			break;
-#endif
+///#ifdef ENABLE_AM_FIX
+///		case MENU_AM_FIX:
+///			gSubMenuSelection = gSetting_AM_fix;
+///			break;
+///#endif
 		#ifdef ENABLE_NOAA
 			case MENU_NOAA_S:
 				gSubMenuSelection = gEeprom.NOAA_AUTO_SCAN;
